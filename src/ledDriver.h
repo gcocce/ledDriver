@@ -19,8 +19,8 @@
 
 /**
  * @file ledDriver.h
- * @author My Self
- * @date 9 Sep 2012
+ * @author Gastón Coccé
+ * @date 3 March 2017
  * @brief File containing example of doxygen usage for quick reference.
  *
  * Here typically goes a more extensive explanation of what the header
@@ -34,20 +34,27 @@
 #include <stdbool.h>
 
 /**
- * @brief A simple stub function to show how links do work.
+ * @brief A simple function to create the Driver.
  *
- * Links are generated automatically for webpages (like http://www.google.co.uk)
- * and for structures, like BoxStruct_struct. For typedef-ed types use
- * #BoxStruct.
- * For functions, automatic links are generated when the parenthesis () follow
- * the name of the function, like Box_The_Function_Name().
- * Alternatively, you can use #Box_The_Function_Name.
- * @return @c NULL is always returned.
+ *
+ * @return @c Void is always returned.
  */
-void ledDriver_create(uint16_t *);
+void ledDriver_create(uint16_t * address);
 
-void ledDriver_TurnLedOn(uint16_t *, uint16_t led /*! The led to turn on */);
+/**
+ * @brief A simple function to turn on a specific led.
+ *
+ *
+ * @return @c Void is always returned.
+ */
+void ledDriver_TurnLedOn(uint16_t * address /*! Address of the driver */,
+		uint16_t led /*! The led to turn on */);
 
+/*! \details This function turns off a specific led.
+  *\param address is the driver's address.
+ *\param led is the a 16 bits mask indicating the led to turn offc*
+ * \return Void.
+ */
 void ledDriver_TurnLedOff(uint16_t *, uint16_t led);
 
 /*! \brief Brief description.
@@ -57,7 +64,12 @@ void ledDriver_TurnLedOff(uint16_t *, uint16_t led);
  */
 void ledDriver_TurnAllOn(uint16_t *);
 
-void ledDriver_TurnAllOff(uint16_t *);
+//! @brief A simple function to turn All Leds Off.
+/*!
+  \sa testMe()
+  \param address is the driver's address.
+*/
+void ledDriver_TurnAllOff(uint16_t * address);
 
 bool ledDriver_LedStatus(uint16_t *, uint16_t led);
 

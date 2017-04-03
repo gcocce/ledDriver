@@ -123,5 +123,36 @@ void testDriverGetLedStatus() {
 
 }
 
+// Test 8
+void testDriverValoresLimites() {
 
+	// Prendemos el led numero 1
+	address = ALL_LEDS_OFF;
+	ledDriver_TurnLedOn(&address, LED_1);
+	TEST_ASSERT_EQUAL_HEX16(LED_1, address);
 
+	// Apagamos el led numero 1
+	address = ALL_LEDS_ON;
+	ledDriver_TurnLedOff(&address, LED_1);
+	TEST_ASSERT_EQUAL_HEX16(LED_1 ^ ALL_LEDS_ON, address);
+
+	// Prendemos el led numero 16
+	address = ALL_LEDS_OFF;
+	ledDriver_TurnLedOn(&address, LED_16);
+	TEST_ASSERT_EQUAL_HEX16(LED_16, address);
+
+	// Apagamos el led numero 16
+	address = ALL_LEDS_ON;
+	ledDriver_TurnLedOff(&address, LED_16);
+	TEST_ASSERT_EQUAL_HEX16(LED_16 ^ ALL_LEDS_ON, address);
+}
+
+// Test 9
+void testDriverValoresFueraDeLosLimites() {
+
+	// Pasamos un cero como parametro
+	address = ALL_LEDS_OFF;
+	ledDriver_TurnLedOn(&address, 0x0000);
+	TEST_ASSERT_EQUAL_HEX16(0x000, address);
+
+}
