@@ -65,10 +65,10 @@
   :testfail: ".fail"
   :dependencies: ".d"
 :unity:
-  :vendor_path: "/cygdrive/c/Users/diego/Documents/WorkspaceIngenieriaDeSoftware/ledDriver/vendor/ceedling/vendor"
+  :vendor_path: "/home/gk/tpIngSoft/ledDriver/vendor/ceedling/vendor"
   :defines: []
 :cmock:
-  :vendor_path: "/cygdrive/c/Users/diego/Documents/WorkspaceIngenieriaDeSoftware/ledDriver/vendor/ceedling/vendor"
+  :vendor_path: "/home/gk/tpIngSoft/ledDriver/vendor/ceedling/vendor"
   :defines: []
   :mock_prefix: mock_
   :when_no_prototypes: :warn
@@ -86,7 +86,7 @@
   :verbosity: 3
   :unity_helper: false
 :cexception:
-  :vendor_path: "/cygdrive/c/Users/diego/Documents/WorkspaceIngenieriaDeSoftware/ledDriver/vendor/ceedling/vendor"
+  :vendor_path: "/home/gk/tpIngSoft/ledDriver/vendor/ceedling/vendor"
   :defines: []
 :test_runner:
   :includes: []
