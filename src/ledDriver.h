@@ -72,6 +72,14 @@ void ledDriver_TurnAllOff(uint16_t * address);
  */
 bool ledDriver_LedStatus(uint16_t *, uint16_t led);
 
+/**
+ * @brief A simple function to create the Driver.
+ *
+ * @param address Es la dirección de memoria que mapea el driver
+ * @param led es la mascara que permite seleccionar los led a encender
+ *
+ * @return void is always returned.
+ */
 void ledDriver_TurnMultipleLedOn(uint16_t *, uint16_t led);
 
 void ledDriver_TurnMultipleLedOff(uint16_t *, uint16_t led);
